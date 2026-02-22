@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Little Bites Bakery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <h1 class="brand">LITTLE BITES BAKERY</h1>
+      <nav class="main-nav" role="navigation" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Hero">
+      <div class="hero-inner container">
+        <h2>Premium Bakery products for All Events</h2>
+        <p class="lead">We Bake happiness into every bite.</p>
+        <div class="hero-cta">
+          <button class="btn gold" id="bookNow">Book Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section container">
+      <h2>Products</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=1200&q=80&auto=format&fit=crop" alt="Wedding cakes">
+          
+          <div class="card-content">
+            <h3>Weddings cakes</h3>
+            <p>Tasty cakes that will leave you licking your creamy filled fingers.</p> 
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=1200&q=80&auto=format&fit=crop" alt="Cookies">
+          <div class="card-content">
+            <h3>Snack</h3>
+            <p>Crunchy and sweet cookies perfect for office treats and leisure walks.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="menu" class="section container">
+      <h2>Our Menu</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&q=80&auto=format&fit=crop" alt="Cakes">
+          <div class="card-content">
+            <h3>sweet cakes</h3>
+            <p>Creamy with salivating cream</p>
+          </div>
+        </article>
+
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=1200&q=80&auto=format&fit=crop" alt="Donuts">
+          <div class="card-content">
+            <h3>Donuts</h3>
+            <p>Deliciously glazed and filled with sweet surprises.</p>
+          </div>
+        </article>
+
+        <article class="card">
+            <div class="cupcake-gallery">
+            <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=1200&q=80&auto=format&fit=crop" alt="Chocolate cupcakes" loading="lazy">
+            </div>
+          <div class="card-content">
+            <h3>Cupcakes</h3>
+            <p>Fluffy, colorful cupcakes with delightful frosting.</p>
+          </div>
+        </article>
+
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=1200&q=80&auto=format&fit=crop" alt="Tray of many sweet muffins" loading="lazy">
+          <div class="card-content">
+            <h3>Muffins</h3>
+            <p>Fresh and moist muffins in various flavors.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section container" aria-label="Contact">
+      <h2>Book Your Event</h2>
+      <p>WhatsApp: <a href="https://wa.me/254742459447" aria-label="Chat on WhatsApp">+254 742 459 447</a></p>
+
+      <form class="contact" id="bookingForm" aria-describedby="contact-help">
+        <div id="contact-help" class="sr-only">Fill in your details to book or request a quote.</div>
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="07XXXXXXXX" pattern="\d{9,12}" required>
+
+        <label for="details">Event Details</label>
+        <textarea id="details" name="details" placeholder="Event date, location, guest count, special requests" rows="4"></textarea>
+
+        <div class="form-actions">
+          <button type="button" class="btn gold" id="whatsappBtn">Book via WhatsApp</button>
+          <button type="button" class="btn" id="mpesaBtn" style="background: #0b8f2a; color: #fff;">Pay with M-Pesa</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© 2026 Little Bites Bakery| Nairobi</p>
+    </div>
+  </footer>
+
+  <!-- M-Pesa Modal -->
+  <div id="mpesaModal" class="modal" aria-hidden="true" role="dialog" aria-label="M-Pesa payment dialog">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close">×</button>
+      <h3>M-Pesa Payment</h3>
+      <p>Send the amount to Till: <strong>0114755708</strong> (Little Bites Bakery)</p>
+      <ol class="payment-steps">
+        <li>Open M-Pesa on your phone.</li>
+        <li>Select Lipa na M-Pesa.</li>
+        <li>Select Pochi la Biashara.</li>
+        <li>Enter Till/Number: <strong>0114755708</strong>.</li>
+        <li>Enter the amount and your M-Pesa PIN.</li>
+        <li>Confirm the payment, then enter the details below.</li>
+      </ol>
+      <label for="mpesaPhone">Phone used for M-Pesa</label>
+      <input id="mpesaPhone" type="tel" placeholder="07XXXXXXXX">
+      <label for="mpesaAmount">Amount (KES)</label>
+      <input id="mpesaAmount" type="number" placeholder="Amount">
+      <button id="confirmMpesa" class="btn gold">I've Sent Payment</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

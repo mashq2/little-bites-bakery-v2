@@ -1,0 +1,17 @@
+{
+  "name": "luxury-catering-ke",
+  "version": "1.0.0",
+  "description": "Static demo site for Luxury Catering Kenya with M-Pesa integration",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "npx live-server --port=3000 --open=./index.html"
+  },
+  "dependencies": {
+    "axios": "^1.13.5",
+    "express": "^4.22.1",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
